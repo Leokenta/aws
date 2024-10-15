@@ -1,0 +1,43 @@
+//instalei o docker no ubunto
+
+//criei 3 containers
+  1-backend httpd
+  2-frontend nginx
+  3-database mysql
+
+//conectei as 3 usando docker network
+  minha-rede
+
+//Adicionei dados no bando de dados (mysql)
+
+//criamos uma pasta (projetos) dentro do backend, dentro instalamos
+
+  apt-get install nodejs 
+  apt-get install npm
+  npm init -y
+  apt-get install nano
+  npm i express dotenv mysql2 (instalar os modulos que faltam)
+  npm install pm2 -g (instalada o pm2)
+  pm2 start index.js --watch (inicia o pm2)
+
+  
+    //criamos dentro da pasta
+      touch index.js
+      touch .env
+
+      dentro da pasta (.env)
+        host:[nome do container]
+        user:[root/usuario]
+        password:[senha]
+        datbase:[nome do bando de dados] 
+
+      dentro da pasta (index.js)
+        clonamos o main.js do codigo do kiltz
+        configuramos dentro do codigo 
+      
+        host=mysql
+        user=root
+        password=1234
+        datbase=colegio 
+
+
