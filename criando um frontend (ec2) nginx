@@ -1,0 +1,20 @@
+sudo su
+apt-get update
+
+apt install nginx -y
+
+systemctl start nginx
+
+systemctl status nginx
+
+apt-get install nano
+
+nano etc/nginx/sites-enabled/default
+  //coloquei detro
+    location /boletim {
+    proxy_pass http://ip-backend:3000;
+    }
+
+nano var/www/html/index.nginx-debian.html
+
+coloque no codigo http://ipbackend/boletim
