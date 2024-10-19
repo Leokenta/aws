@@ -9,6 +9,7 @@ cd projetos
   touch main.js
   nano main.js
     //coloquei dados no main.js
+    e mudei o "/boletim"
 
 touch .env
 nano .env
