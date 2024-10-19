@@ -1,0 +1,31 @@
+sudo su
+
+apt-get update
+
+apt install -y nodejs npm
+
+mkdir projetos
+cd projetos
+  touch main.js
+  nano main.js
+    //coloquei dados no main.js
+
+touch .env
+nano .env
+  host=3.22.120.45
+  user=usuario
+  password=sua-senha
+  database=colegio
+
+//instalando pacotes npm
+  npm i dotenv express mysql2 
+  npm init -y 
+
+//teste se esta rodando
+node main.js
+
+//instalando pm2
+npm i pm2 -g
+pm2 start main.js --watch  //inicializando
+
+
