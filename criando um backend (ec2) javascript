@@ -6,10 +6,21 @@ apt install -y nodejs npm
 
 mkdir projetos
 cd projetos
+
+//instalando pacotes npm
+  npm i dotenv express mysql2 cors
+  npm init -y 
+
   touch main.js
   nano main.js
     //coloquei dados no main.js
     e mudei o "/boletim"
+    acrescentei o cors
+    {
+const cors = require('cors');
+app.use(express.json());
+app.use (cors())
+    }
 
 touch .env
 nano .env
@@ -18,9 +29,7 @@ nano .env
   password=sua-senha
   database=colegio
 
-//instalando pacotes npm
-  npm i dotenv express mysql2 
-  npm init -y 
+
 
 //teste se esta rodando
 node main.js
