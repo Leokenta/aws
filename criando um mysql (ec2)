@@ -1,0 +1,22 @@
+// CRIANDO UM MYSQL NA EC2 
+sudo su
+
+apt-get upgrade 
+
+apt-get install mysql-server -y
+
+systemctl start mysqld
+
+systemctl enable mysqld
+
+apt-get install nano
+
+nano /etc/mysql/mysql.conf.d/mysqld.cnf //mudar bind adress : 0.0.0.0
+
+systemctl restart mysql
+
+mysql -u root -p
+
+CREATE USER 'usuario'@'3.131.162.188' IDENTIFIED BY 'sua-senha';
+GRANT ALL PRIVILEGES ON *.* TO 'usuario'@'3.131.162.188' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
